@@ -1,0 +1,130 @@
+html{
+	height:100%;
+}
+
+/*
+	navbar settings
+*/
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+	border:none;
+	border-left:none;
+	border-right:none;
+	background-color:black;
+}
+
+#home-nav{
+
+	}
+
+#myNavbar{
+	padding-left:0px;
+	//margin-left:5%;
+}
+
+.navbar-inverse .navbar-nav>li>a{
+	color:#e8297c;
+	//color:white;
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+	//color:black;
+	//color:#e8297c;
+	color:white;
+}
+.navbar-inverse .navbar-nav>li:hover{
+	background-color:black;
+	background-color:#e8297c;
+	//color:white;
+}
+.navbar-inverse .navbar-nav>li {
+	text-align:center;
+	width:150px;
+	//color:white;
+}
+
+.navbar-brand{
+	
+}
+
+
+/* Jumbotron */
+.container{
+	border-radius:none;
+}
+
+.container-fluid{
+	padding-left:0px;
+	padding-right:0px;
+}
+
+#jumbotron{
+	width:100%;
+	padding:0px;
+	text-align:center;
+	background-color:#e8297c;
+}
+
+.jumbotron{
+	background-color:#e8297c;
+}
+
+#campusme-header{
+	color:white;
+}
+
+
+
+
+
+
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+	height: 100%;
+	background-color:#f2f2f2;
+}
+.row {
+	margin-left:0px;
+	margin-right:0px;
+		
+}
+
+#content-body{
+	
+	background-color:#f2f2f2;
+	height:100%;
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+	//padding-top: 20px;
+	background-color: #f2f2f2;
+	height: 100%;
+	
+}
+
+/* Set black background color, white text and some padding */
+footer {
+	
+	background-color: black;
+	padding: 15px;
+	//position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1rem;
+	color: white;
+	text-align: center;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+	.sidenav {
+		height: auto;
+		padding-left: 15px;
+	}
+	.row.content {
+		height: auto;
+	}
+}
