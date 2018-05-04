@@ -1,90 +1,108 @@
-"use strict";
+'use strict';
 
 var m = require('mithril');
 
 var NavBar = {
+  oninit: function oninit(vnode) {
+    vnode.state.firstDisplay = true;
+    vnode.state.collapsed = true;
+  },
+
+  toggleCollapse: function toggleCollapse(vnode) {
+    console.log('Collapse toggle');
+    vnode.state.collapsed = !vnode.state.collapsed;
+  },
+
   view: function view(vnode) {
     var changePage = vnode.attrs.changePage;
 
+    var navClass = 'collapse navbar-collapse ';
+    if (vnode.state.firstDisplay) {
+      vnode.state.firstDisplay = false;
+    } else {
+      navClass += vnode.state.collapsed ? 'nav-navclose in' : 'nav-navopen in';
+    }
     return m(
-      "nav",
-      { "class": "navbar navbar-inverse" },
+      'nav',
+      { 'class': 'navbar navbar-inverse' },
       m(
-        "div",
-        { "class": "container-fluid" },
+        'div',
+        { 'class': 'container-fluid' },
         m(
-          "div",
-          { "class": "navbar-header", id: "nav-header" },
+          'div',
+          { 'class': 'navbar-header', id: 'nav-header' },
           m(
-            "button",
-            { type: "button", "class": "navbar-toggle", "data-toggle": "collapse", "data-target": "#myNavbar" },
-            m("span", { "class": "icon-bar" }),
-            m("span", { "class": "icon-bar" }),
-            m("span", { "class": "icon-bar" })
+            'button',
+            { type: 'button', 'class': 'navbar-toggle ' + (vnode.state.collapsed ? 'collapsed' : ''), 'data-toggle': 'collapse', 'data-target': '#myNavbar', onclick: function onclick() {
+                vnode.tag.toggleCollapse(vnode);
+              } },
+            m('span', { 'class': 'icon-bar' }),
+            m('span', { 'class': 'icon-bar' }),
+            m('span', { 'class': 'icon-bar' })
           )
         ),
         m(
-          "div",
-          { "class": "collapse navbar-collapse", id: "myNavBar" },
+          'div',
+          { 'class': navClass, id: 'myNavBar' },
           m(
-            "ul",
-            { "class": "nav navbar-nav" },
+            'ul',
+            { 'class': 'nav navbar-nav' },
             m(
-              "li",
-              { id: "home-nav" },
+              'li',
+              { id: 'home-nav' },
               m(
-                "a",
-                { href: "#", onclick: function onclick() {
+                'a',
+                { href: '#', onclick: function onclick() {
                     changePage('Campus');
                   } },
-                "Campus"
+                'Campus'
               )
             ),
             m(
-              "li",
+              'li',
               null,
               m(
-                "a",
-                { href: "#", onclick: function onclick() {
+                'a',
+                { href: '#', onclick: function onclick() {
                     changePage('Me');
                   } },
-                "Me"
+                'Me'
               )
             ),
             m(
-              "li",
+              'li',
               null,
               m(
-                "a",
-                { href: "#", onclick: function onclick() {
+                'a',
+                { href: '#', onclick: function onclick() {
                     changePage('DMs');
                   } },
-                "DM's"
+                'DM\'s'
               )
             ),
             m(
-              "li",
+              'li',
               null,
               m(
-                "a",
-                { href: "#", onclick: function onclick() {
+                'a',
+                { href: '#', onclick: function onclick() {
                     changePage('WhatsPoppin');
                   } },
-                "What's Poppin"
+                'What\'s Poppin'
               )
             )
           ),
           m(
-            "ul",
-            { "class": "nav navbar-nav navbar-right" },
+            'ul',
+            { 'class': 'nav navbar-nav navbar-right' },
             m(
-              "li",
+              'li',
               null,
               m(
-                "a",
-                { href: "#" },
-                m("span", { "class": "glyphicon glyphicon-log-in" }),
-                "Login"
+                'a',
+                { href: '#' },
+                m('span', { 'class': 'glyphicon glyphicon-log-in' }),
+                'Login'
               )
             )
           )
