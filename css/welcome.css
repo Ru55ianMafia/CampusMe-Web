@@ -65,7 +65,8 @@
   #enter_cm{
     vertical-align: middle;
     font-size: 52px;
-  
+    color: white;
+    text-decoration: none;
   }
   /*
   footer li{
