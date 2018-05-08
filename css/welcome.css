@@ -8,9 +8,9 @@
     background-color: black;
   }
   body{
-    font:normal normal 200 118.6%/1.2 "Helvetica Neue", "Arial Narrow", Helvetica, Arial, sans-serif;
     color:#fff;
-    
+    font-family: 'Julius Sans One', sans-serif;
+
   }
   body, #bg{
     background: #000 none 50% / cover no-repeat;
@@ -28,6 +28,11 @@
   
   
   a{ text-decoration:none; color:#fff; }
+  a:hover{
+    color: white;
+    text-decoration: none;
+  }
+
   p{margin:1% 2%;}
   h1, h3{
     font-weight:200;
@@ -45,21 +50,32 @@
   
   footer{
     position:absolute;
-    background:rgba(0,0,0,0.4);
+    /*background:rgba(0,0,0,0.4);*/
+    background: linear-gradient(to bottom, rgba(255,0,0,0), rgba(219, 19, 106, .75));
+    /*background: rgba(219, 19, 106, .5);*/
     width:100%;
     bottom:0;
-    text-align:center;
+    text-align: center;
+    height:15%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
+  #enter_cm{
+    vertical-align: middle;
+    font-size: 52px;
+    color: white;
+    text-decoration: none;
+  }
+  /*
   footer li{
     display:inline-block;
   }
   footer li a{
     display:inline-block;
     padding:1em 2em;
-    border-right:1px solid rgba(0,0,0,0.7);
   }
-  footer li:nth-child(1) a{
-    border-left:1px solid rgba(0,0,0,0.7);
-  }
+  */
 
  

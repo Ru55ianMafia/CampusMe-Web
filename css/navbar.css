@@ -1,0 +1,30 @@
+
+@keyframes navopening {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 224px;
+  }
+}
+
+@keyframes navclosing {
+  from {
+    height: 224px;
+  }
+  to {
+    height: 0px;
+  }
+}
+
+.nav-navopen {
+  animation-name: navopening;
+  animation-duration: 1s;
+}
+
+.nav-navclose {
+  animation-name: navclosing;
+  animation-duration: 1s;
+  height: 0px;
+}
+
