@@ -18,7 +18,7 @@ var NavBar = {
 
     var navClass = 'collapse navbar-collapse ';
     if (vnode.state.firstDisplay) {
-      vnode.state.firstDisplay = false;
+      //vnode.state.firstDisplay = false;
     } else {
       navClass += vnode.state.collapsed ? 'nav-navclose in' : 'nav-navopen in';
     }
@@ -33,7 +33,12 @@ var NavBar = {
           { 'class': 'navbar-header', id: 'nav-header' },
           m(
             'button',
-            { type: 'button', 'class': 'navbar-toggle ' + (vnode.state.collapsed ? 'collapsed' : ''), 'data-toggle': 'collapse', 'data-target': '#myNavbar', onclick: function onclick() {
+            { type: 'button',
+              'class': 'navbar-toggle ' + (vnode.state.collapsed ? 'collapsed' : ''),
+              'data-toggle': 'collapse',
+              'data-target': '#myNavbar',
+              onclick: function onclick() {
+                vnode.state.firstDisplay = false;
                 vnode.tag.toggleCollapse(vnode);
               } },
             m('span', { 'class': 'icon-bar' }),
