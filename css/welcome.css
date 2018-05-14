@@ -68,14 +68,24 @@
     color: white;
     text-decoration: none;
   }
-  /*
-  footer li{
-    display:inline-block;
-  }
-  footer li a{
-    display:inline-block;
-    padding:1em 2em;
-  }
-  */
 
+  #cm_title{
+    font-size: 5em;
+    margin-left: 5%;
+  }
+
+  h3{
+    margin-left: 12.5%;
+    margin-top: 1%;
+    font-size: 1em;
+  }
+
+  /* At smaller screen size */
+
+  @media only screen and (max-width: 600px) {
+    
+    body {
+      background-color: white;
+    }
+}
  
