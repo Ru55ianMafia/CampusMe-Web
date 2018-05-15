@@ -21,8 +21,8 @@
 
       <div id="page" style="background-color: rgba(0,0,0,0.6);">  
         
-        <h1>StackOverflow</h1><br>
-        <h3>Inspiration in Art &amp; Technology </h3>
+        <h1 id="cm_title">CampusMe</h1><br>
+        <h3 id-"cm_subtitle">College dating and more!</h3>
         
         <footer> 
             <a href="#" id="enter_cm">Enter CampusMe</a>  
@@ -37,12 +37,12 @@
         
       <script>
       var images = [
-                  "images/sharon-mccutcheon-526886-unsplash.jpg",  
-                  "images/ethan-hu-590388-unsplash.jpg",               
-                  "images/smaller/alexis-brown-85793-unsplash.jpeg",
-                  "images/smaller/naassom-azevedo-541451-unsplash.jpeg",
-                  "images/smaller/shanique-wright-368291-unsplash.jpeg",
-                  "images/tu_1.jpeg"
+                  "images/welcome/sharon-mccutcheon-526886-unsplash.jpg",  
+                  "images/welcome/ethan-hu-590388-unsplash.jpeg",               
+                  "images/welcome/alexis-brown-85793-unsplash.jpeg",
+                  "images/welcome/naassom-azevedo-541451-unsplash.jpeg",
+                  "images/welcome/shanique-wright-368291-unsplash.jpeg",
+                  "images/welcome/tu_1.jpeg"
                 ];
       var $body = $("body"),
           $bg = $("#bg"),
@@ -58,7 +58,7 @@
       $body.css({backgroundImage : "url("+images[c]+")"}); 
 
       (function loopBg(){
-        $bg.hide().css({backgroundImage : "url("+images[++c%n]+")"}).delay(3000).fadeTo(1200, 1, function(){
+        $bg.hide().css({backgroundImage : "url("+images[++c%n]+")"}).delay(3000).fadeTo(800, 1, function(){
           $body.css({
               backgroundImage : "url("+images[c%n]+")"
               
